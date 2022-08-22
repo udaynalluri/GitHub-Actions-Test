@@ -15,5 +15,5 @@ jobs:
       - name: running shell Commands
         run: |
           df -h
-          top
+          hostname
 
