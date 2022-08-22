@@ -12,5 +12,8 @@ jobs:
         run: |
           node -v
           npm -v
-
+      - name: running shell Commands
+        run: |
+          df -h
+          df -hP
 
