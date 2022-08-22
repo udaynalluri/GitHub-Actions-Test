@@ -16,4 +16,9 @@ jobs:
         run: |
           df -h
           hostname
+      - name: python Command
+        run: |
+          import platform
+          print(platform.procerssor())
+        shell: python  
 
