@@ -5,8 +5,14 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
- 
-
+    
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'tag'
+        required: true
+        default: 'latest'
+        
 jobs:
 
   build:
@@ -27,4 +33,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ubnalluri/githubaction:latest
+          tags: ubnalluri/githubaction:${{ github.event.inputs.tag }}
