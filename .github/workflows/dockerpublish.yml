@@ -1,4 +1,4 @@
-name: Docker Publish Image
+name: Docker Build and Publish Image
 
 on:
   push:
@@ -8,10 +8,10 @@ on:
     
   workflow_dispatch:
     inputs:
-      tag:  
-        description: 'tag'
+      tag:
+        description: 'Tag'
         required: true
-        default: 'latest'    
+        default: 'latest' 
         
 jobs:
 
