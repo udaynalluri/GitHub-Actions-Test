@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ "master" ]
         
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'tag'
+        required: true
+        default: 'latest'
 jobs:
   build:
     runs-on: self-hosted
@@ -26,5 +32,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ubnalluri/githubaction:latest
+          tags: ubnalluri/githubaction:${{ github.event.inputs.tag}}
 
