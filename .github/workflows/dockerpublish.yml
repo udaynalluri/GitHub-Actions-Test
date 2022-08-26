@@ -40,5 +40,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ubnalluri/githubaction:${{ github.event.inputs.tag}}
+          tags: ubnalluri/githubaction:${{ github.event.inputs.tag }}
 
