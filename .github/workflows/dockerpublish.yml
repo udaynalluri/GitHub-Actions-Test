@@ -5,18 +5,9 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
-    
-  workflow_dispatch:
-    inputs:
-      tag:
-        description: 'Tag'
-        required: true
-        default: 'latest' 
         
 jobs:
-
   build:
-
     runs-on: self-hosted
 
     steps:
@@ -35,5 +26,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ubnalluri/githubaction:${{ guthub.event.inputs.tag }}
+          tags: ubnalluri/githubaction:latest
 
