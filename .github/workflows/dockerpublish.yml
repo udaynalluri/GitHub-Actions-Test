@@ -5,6 +5,13 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+    
+  workflow_dispatch:
+    inputs:
+      tag:  
+        description: 'tag'
+        required: true
+        default: 'latest'    
         
 jobs:
 
@@ -28,5 +35,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ubnalluri/githubaction:latest
+          tags: ubnalluri/githubaction:${{ guthub.event.inputs.tag }}
 
