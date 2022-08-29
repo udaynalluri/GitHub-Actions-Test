@@ -28,7 +28,7 @@ jobs:
       
       - name: Run a multi-line script
         run: |
-          docker run --name demoapp -p 5000 -d ubnalluri/githubactions:latest
+          docker run --name demoapp -p 5000 -d ubnalluri/githubactions:1661740178
           docker ps
           
       - if: github.event.inputs.tag == 'latest'
