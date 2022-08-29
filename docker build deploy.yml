@@ -33,5 +33,5 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ubnalluri/githubaction:${{ github.event.input.tag }}
+          tags: ubnalluri/githubaction:${{ github.event.inputs.tag }}
 
