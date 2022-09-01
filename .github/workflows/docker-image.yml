@@ -1,6 +1,6 @@
 name: Docker Image
 
-on:
+#on:
   schedule:
     - cron: '0/55 * * * *'
 
